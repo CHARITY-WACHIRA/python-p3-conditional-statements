@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
 
 def admin_login(username, password):
-    if (username.lower() == "admin" or username.lower() == "admin") and password == "12345":
+    # Convert the username to lowercase for case-insensitive comparison
+    username_lower = username.lower()
+
+    # Check if the username is "admin" and the password is "12345"
+    if username_lower == "admin" and password == "12345":
         return "Access granted"
     else:
         return "Access denied"
